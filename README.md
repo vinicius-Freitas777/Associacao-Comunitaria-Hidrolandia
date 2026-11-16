@@ -63,3 +63,30 @@ git push -u origin main
 ## GitHub Pages (opcional)
 
 No GitHub acesse **Settings > Pages > Build and deployment > Deploy from a branch** e selecione a branch `main` e a pasta `/ (root)`. A página estará disponível quando a publicação terminar. Confira direitos de uso da marca e foto antes de publicar.
+
+
+## Como executar o projeto
+
+O Portal Comunitário de Hidrolândia é uma aplicação
+web desenvolvida com HTML, CSS e JavaScript.
+
+### Requisitos
+- Navegador atualizado
+- Visual Studio Code (recomendado)
+
+### Instruções de execução
+
+1. Baixe ou clone o repositório do GitHub.
+2. Abra a pasta do projeto no VS Code.
+3. Localize o arquivo index.html.
+4. Abra o arquivo no navegador.
+5. Utilize o menu lateral para acessar as funcionalidades.
+
+### Objetivo acadêmico
+
+Este MVP foi desenvolvido para demonstrar uma solução
+digital voltada à organização de atividades comunitárias,
+facilitando o acesso a informações e eventos.
+
+O projeto utiliza dados demonstrativos e não deve
+ser considerado um sistema oficial da associação.
