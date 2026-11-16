@@ -7,3 +7,21 @@ body.dark{--paper:#152846;--body:#0a1a30;--ink:#f0f5ff;--soft:#b5c3da;--stroke:#
 @media(max-width:720px){.topbar{height:70px;padding:0 14px}.topbar-left{gap:8px}.topbar-left strong{font-size:15px}.topbar-left small{font-size:8px}.topbar-right{gap:5px}.profile{width:36px;height:36px}.notification-btn{display:none}main{padding:0 13px 20px}.page{padding-top:14px}.hero{min-height:290px}.hero-photo{inset:0 0 0 17%}.hero:after{background:linear-gradient(90deg,#03192def,#06294ecb 65%,#083b6240)}.hero-copy{padding:32px 22px 29px 38px}.hero-copy:before{left:18px;top:69px}.hero h1{font-size:38px}.hero p{font-size:17px}.section-heading{margin:24px 0 13px}.section-heading h2{font-size:19px}.subtle{display:none}.quick-grid{grid-template-columns:repeat(2,1fr);gap:11px}.quick-card{min-height:99px;padding:17px 13px}.quick-symbol{font-size:25px}.quick-card strong{font-size:14px}.quick-arrow{font-size:25px}.dashboard-grid{grid-template-columns:1fr;gap:15px;margin-top:18px}.stack{gap:15px}.feature-news{grid-template-columns:130px 1fr}.footer{padding:18px 15px}.footer>div{gap:8px}.footer-separator{display:none}.footer strong{width:100%}.page-title{align-items:flex-start;flex-direction:column}.stat-strip{gap:9px}.stat-strip>div{padding:15px 10px}.stat-strip span{font-size:11px}.stat-strip strong{font-size:23px}.article-grid,.settings-grid,.service-grid{grid-template-columns:1fr}.info-panel{flex-direction:column;align-items:start;padding:24px}.info-art{width:100%;height:120px;flex-basis:120px}.form-grid{grid-template-columns:1fr}.panel-head.wrap{flex-direction:column;align-items:stretch}.searchbox{width:100%}}
 @media(max-width:420px){.feature-news{grid-template-columns:1fr}.news-art{min-height:135px}.panel{padding:16px}.metric-grid strong{font-size:25px}.metric-grid span:last-child{font-size:10px}.event-row{gap:9px;flex-wrap:wrap}.event-actions{width:100%;justify-content:flex-end}.footer>div{display:grid}.quick-symbol{display:none}.quick-card strong{font-size:15px}.quick-card{padding:16px}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
+
+
+/* Aprimoramento do rodapé institucional */
+footer {
+    border-top: 2px solid #d6e3f5;
+    padding: 24px;
+    text-align: center;
+}
+
+footer a {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+footer a:focus-visible {
+    outline: 3px solid #f5b942;
+    outline-offset: 4px;
+}
