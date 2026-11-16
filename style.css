@@ -25,3 +25,27 @@ footer a:focus-visible {
     outline: 3px solid #f5b942;
     outline-offset: 4px;
 }
+
+/* Melhorias de responsividade para celulares */
+@media (max-width: 600px) {
+    .banner {
+        padding: 24px 16px;
+    }
+
+    .banner h2 {
+        font-size: clamp(24px, 7vw, 36px);
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .card {
+        min-width: 0;
+        overflow-wrap: anywhere;
+    }
+
+    footer {
+        padding: 20px 12px;
+    }
+}
