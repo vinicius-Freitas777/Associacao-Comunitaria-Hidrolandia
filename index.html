@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#071e43">
+  <meta name="description" content="Protótipo acadêmico do portal da Associação Comunitária de Hidrolândia, com cadastro de atividades e notícias demonstrativas.">
+  <title>Portal Comunitário · Hidrolândia</title>
+  <link rel="icon" href="assets/marca.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#conteudo">Ir para o conteúdo principal</a>
+<div class="app" id="app">
+  <aside class="sidebar" id="sidebar" aria-label="Barra lateral">
+    <div class="identity"><img src="assets/marca.svg" alt="Marca ilustrativa da associação" width="168" height="100"><h2>Associação<br>Comunitária de<br>Hidrolândia</h2><p>Juntos por uma<br>cidade melhor!</p></div>
+    <div class="sidebar-rule"></div>
+    <nav class="nav" aria-label="Navegação principal">
+      <a href="#inicio" data-route="inicio"><span aria-hidden="true">⌂</span> Início</a>
+      <a href="#noticias" data-route="noticias"><span aria-hidden="true">▤</span> Notícias</a>
+      <a href="#eventos" data-route="eventos"><span aria-hidden="true">▦</span> Eventos</a>
+      <a href="#servicos" data-route="servicos"><span aria-hidden="true">▣</span> Serviços</a>
+      <a href="#associados" data-route="associados"><span aria-hidden="true">♙</span> Associados</a>
+      <a href="#manifestacoes" data-route="manifestacoes"><span aria-hidden="true">⚑</span> Manifestações</a>
+      <a href="#sobre" data-route="sobre"><span aria-hidden="true">ⓘ</span> Sobre nós</a>
+      <a href="#configuracoes" data-route="configuracoes"><span aria-hidden="true">⚙</span> Configurações</a>
+    </nav>
+    <div class="side-foot"><span class="demo-label"><span class="demo-dot"></span> Ambiente demonstrativo</span><small>Projeto acadêmico • sem vínculo oficial</small></div>
+  </aside>
+  <div class="overlay" id="overlay" hidden></div>
+  <div class="main-column">
+    <header class="topbar">
+      <div class="topbar-left"><button class="icon-btn menu-trigger" id="menu-trigger" type="button" aria-controls="sidebar" aria-expanded="false" aria-label="Abrir menu">☰</button><div><small>PORTAL DA COMUNIDADE</small><strong>Associação Comunitária de Hidrolândia</strong></div></div>
+      <div class="topbar-right"><span class="location-chip">📍 Hidrolândia, GO</span><button class="icon-btn notification-btn" id="notification-btn" type="button" aria-label="Ver avisos">♧<i aria-hidden="true"></i></button><span class="profile" title="Perfil demonstrativo" aria-label="Perfil demonstrativo">AC</span></div>
+    </header>
+    <main id="conteudo" tabindex="-1">
+      <section class="page" data-page="inicio" aria-labelledby="home-title">
+        <div class="hero"><div class="hero-copy"><span class="hero-eyebrow"><span class="spark"></span> UM ESPAÇO PARA TODOS</span><h1 id="home-title">Bem-vindo(a)!</h1><p>Fortalecendo nossa comunidade,<br>construindo uma Hidrolândia ainda melhor.</p><button type="button" class="hero-link" data-go="eventos">Explorar atividades <span aria-hidden="true">↗</span></button></div><div class="hero-photo" role="img" aria-label="Recorte da imagem de referência de Hidrolândia fornecida para o protótipo"></div></div>
+        <div class="section-heading"><div><span class="overline">ACESSO RÁPIDO</span><h2>O que você precisa hoje?</h2></div><span class="subtle">Tudo em um só lugar</span></div>
+        <div class="quick-grid">
+          <button class="quick-card blue" type="button" data-go="associados"><span class="quick-symbol" aria-hidden="true">♟</span><strong>Se tornar<br>associado</strong><span class="quick-arrow" aria-hidden="true">›</span></button>
+          <button class="quick-card green" type="button" data-go="eventos"><span class="quick-symbol" aria-hidden="true">▦</span><strong>Consultar<br>eventos</strong><span class="quick-arrow" aria-hidden="true">›</span></button>
+          <button class="quick-card orange" type="button" data-go="noticias"><span class="quick-symbol" aria-hidden="true">◉</span><strong>Ver<br>notícias</strong><span class="quick-arrow" aria-hidden="true">›</span></button>
+          <button class="quick-card purple" type="button" data-go="manifestacoes"><span class="quick-symbol" aria-hidden="true">!</span><strong>Enviar<br>manifestação</strong><span class="quick-arrow" aria-hidden="true">›</span></button>
+        </div>
+        <div class="dashboard-grid">
+          <div class="stack">
+            <article class="panel news-panel"><div class="panel-head"><h2><span class="panel-icon">📣</span> Últimas notícias</h2><button class="link-btn" type="button" data-go="noticias">Ver todas <span aria-hidden="true">→</span></button></div><div class="feature-news"><div class="news-art" aria-hidden="true"><span>COMUNIDADE<br>EM AÇÃO</span></div><div><span class="pill-blue">DEMONSTRAÇÃO</span><h3>Construindo uma comunidade mais conectada</h3><p>Um espaço para divulgar iniciativas, encontros e novidades dos moradores.</p><span class="muted-mini">Conteúdo ilustrativo</span></div></div></article>
+            <article class="panel"><div class="panel-head"><h2><span class="panel-icon">📅</span> Próximos eventos</h2><button class="link-btn" type="button" data-go="eventos">Ver todos <span aria-hidden="true">→</span></button></div><div id="featured-event" class="featured-event" aria-live="polite"></div></article>
+          </div>
+          <div class="stack">
+            <article class="about-card"><div class="about-symbol" aria-hidden="true">🤝</div><div><h2>Nossa associação</h2><p>Promovendo participação, união e oportunidades para uma comunidade cada vez mais forte.</p><button class="link-btn" type="button" data-go="sobre">Saiba mais <span aria-hidden="true">→</span></button></div><div class="city-lines" aria-hidden="true">⌂</div></article>
+            <article class="panel metrics"><div class="panel-head"><h2><span class="panel-icon">▥</span> Números do portal</h2></div><div class="metric-grid"><div><span class="metric-symbol">♟</span><strong id="metric-total">0</strong><span>Atividades</span></div><div><span class="metric-symbol">✓</span><strong id="metric-future">0</strong><span>Próximas</span></div><div><span class="metric-symbol">◎</span><strong id="metric-news">2</strong><span>Notícias-demo</span></div></div><p class="metrics-disclaimer">Estatísticas apenas deste protótipo. Não são números oficiais da associação.</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="page" data-page="eventos" hidden aria-labelledby="events-title">
+        <div class="page-title"><div><span class="overline">AGENDA COMUNITÁRIA</span><h1 id="events-title">Eventos e atividades</h1><p>Organize ações, acompanhe a programação e mantenha a comunidade informada.</p></div><button class="btn btn-primary" id="create-event" type="button">＋ Nova atividade</button></div>
+        <div class="stat-strip"><div><span>Atividades cadastradas</span><strong id="events-total">0</strong></div><div><span>Próximas atividades</span><strong id="events-future">0</strong></div><div><span>Salvos neste dispositivo</span><strong>Local</strong></div></div>
+        <section class="panel editor-panel" id="event-editor" hidden aria-labelledby="form-title"><div class="panel-head"><h2 id="form-title">Cadastrar atividade</h2><button class="link-btn" id="close-event" type="button">Fechar ✕</button></div><form id="event-form"><div class="form-grid"><label>Título da atividade *<input id="ev-title" required maxlength="85" placeholder="Ex.: Reunião comunitária"></label><label>Data *<input id="ev-date" required type="date"></label><label>Horário *<input id="ev-time" required type="time"></label><label>Local *<input id="ev-place" required maxlength="100" placeholder="Ex.: Salão comunitário"></label><label class="wide">Descrição *<textarea id="ev-description" required maxlength="500" rows="3" placeholder="Descreva brevemente o objetivo da atividade"></textarea></label></div><p class="helper">Use apenas informações fictícias neste protótipo. Dados são armazenados no próprio navegador.</p><div class="form-buttons"><button type="button" class="btn btn-ghost" id="cancel-event">Cancelar</button><button type="submit" class="btn btn-primary">Salvar atividade</button></div></form></section>
+        <section class="panel"><div class="panel-head wrap"><h2>Atividades cadastradas</h2><label class="searchbox"><span class="sr-only">Pesquisar atividades</span><span aria-hidden="true">⌕</span><input type="search" id="event-search" placeholder="Buscar por título ou local"></label></div><div id="events-list" class="events-list"></div></section>
+      </section>
+
+      <section class="page" data-page="noticias" hidden aria-labelledby="news-title"><div class="page-title"><div><span class="overline">FIQUE POR DENTRO</span><h1 id="news-title">Notícias da comunidade</h1><p>Informações e iniciativas em destaque, com conteúdo demonstrativo.</p></div></div><div class="article-grid"><article class="article-card"><div class="article-image art-one"><span>UNIÃO & PARTICIPAÇÃO</span></div><div class="article-body"><span class="pill-blue">EXEMPLO • NÃO OFICIAL</span><h2>Comunidade conectada, cidade mais forte</h2><p>O portal pode ajudar a divulgar ações e fortalecer a participação dos moradores.</p></div></article><article class="article-card"><div class="article-image art-two"><span>IDEIAS QUE TRANSFORMAM</span></div><div class="article-body"><span class="pill-blue">EXEMPLO • NÃO OFICIAL</span><h2>Informação acessível para todos</h2><p>Uma interface clara aproxima a comunidade das atividades e novidades da associação.</p></div></article></div></section>
+      <section class="page" data-page="servicos" hidden aria-labelledby="services-title"><div class="page-title"><div><span class="overline">COMO PODEMOS AJUDAR?</span><h1 id="services-title">Serviços à comunidade</h1><p>Conheça os módulos planejados para o portal.</p></div></div><div class="service-grid"><article class="panel service-card"><div class="service-emoji">📅</div><h2>Agenda de atividades</h2><p>Consulte os encontros cadastrados no ambiente demonstrativo.</p><button class="btn btn-ghost" type="button" data-go="eventos">Acessar agenda →</button></article><article class="panel service-card"><div class="service-emoji">📣</div><h2>Informativos</h2><p>Veja os comunicados de exemplo disponíveis no portal.</p><button class="btn btn-ghost" type="button" data-go="noticias">Ver notícias →</button></article><article class="panel service-card"><div class="service-emoji">🤝</div><h2>Participação</h2><p>Saiba mais sobre os recursos para associados previstos para o futuro.</p><button class="btn btn-ghost" type="button" data-go="associados">Saiba mais →</button></article></div></section>
+      <section class="page" data-page="associados" hidden aria-labelledby="members-title"><div class="page-title"><div><span class="overline">FAÇA PARTE</span><h1 id="members-title">Associados</h1><p>Juntos, podemos construir uma comunidade mais participativa.</p></div></div><div class="info-panel"><div class="info-art" aria-hidden="true">🤝</div><div><span class="pill-blue">RECURSO PLANEJADO</span><h2>Cadastro de associados</h2><p>Para garantir proteção de dados pessoais, o cadastro de associados ainda não foi ativado. A versão futura precisará de autorização, controles de acesso e armazenamento seguro.</p><button class="btn btn-primary" data-go="eventos" type="button">Conhecer atividades</button></div></div></section>
+      <section class="page" data-page="manifestacoes" hidden aria-labelledby="reports-title"><div class="page-title"><div><span class="overline">ESCUTA RESPONSÁVEL</span><h1 id="reports-title">Manifestações</h1><p>Participação cidadã também depende de cuidado com a privacidade.</p></div></div><div class="info-panel"><div class="info-art purple-art" aria-hidden="true">!</div><div><span class="pill-blue">CANAL EM PREPARAÇÃO</span><h2>Envio de manifestações ainda indisponível</h2><p>Este projeto acadêmico não recebe denúncias ou informações sensíveis. Antes de ativar o serviço, será necessário implantar autenticação, sigilo, política de tratamento de dados e encaminhamento responsável.</p><p class="helper">Não envie relatos reais por formulários ou campos deste protótipo.</p></div></div></section>
+      <section class="page" data-page="sobre" hidden aria-labelledby="about-title"><div class="page-title"><div><span class="overline">NOSSA HISTÓRIA</span><h1 id="about-title">Sobre o portal</h1><p>Tecnologia simples a serviço da participação comunitária.</p></div></div><div class="panel prose"><h2>Uma plataforma feita para aproximar pessoas</h2><p>Este MVP acadêmico foi elaborado para representar uma solução digital voltada à organização e divulgação de atividades comunitárias em Hidrolândia, Goiás.</p><h3>O que o MVP demonstra?</h3><p>Navegação intuitiva, cadastro e consulta de atividades, pesquisa, mensagens de confirmação, adaptação a diferentes dispositivos e recursos iniciais de acessibilidade.</p><h3>Transparência</h3><p>A plataforma é uma demonstração, sem vinculação oficial à associação. Imagens, marca, notícias e números requerem aprovação antes de qualquer publicação institucional.</p></div></section>
+      <section class="page" data-page="configuracoes" hidden aria-labelledby="settings-title"><div class="page-title"><div><span class="overline">PERSONALIZAÇÃO</span><h1 id="settings-title">Configurações</h1><p>Ajuste sua experiência e gerencie os dados deste navegador.</p></div></div><div class="settings-grid"><div class="panel"><h2>Aparência</h2><p>Escolha o visual que você prefere usar.</p><div class="setting-control"><span>Tema escuro</span><button type="button" class="btn btn-ghost" id="theme-toggle" aria-pressed="false">Ativar tema escuro</button></div></div><div class="panel"><h2>Dados da demonstração</h2><p>Exporte um arquivo JSON com as atividades cadastradas neste dispositivo ou apague os registros locais.</p><div class="form-buttons left"><button type="button" class="btn btn-primary" id="export-events">Exportar atividades</button><button type="button" class="btn btn-danger" id="clear-events">Limpar registros</button></div></div></div></section>
+    </main>
+    <footer class="footer"><div><span class="footer-location">📍 Hidrolândia - GO</span><span class="footer-separator" aria-hidden="true"></span><span>Associação Comunitária de Hidrolândia © <span id="copyright-year">2026</span>. Todos os direitos reservados.</span></div><strong>Juntos somos mais fortes!</strong><small>Protótipo acadêmico não oficial</small></footer>
+  </div>
+</div>
+<div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+</body>
+</html>
