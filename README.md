@@ -90,3 +90,28 @@ facilitando o acesso a informações e eventos.
 
 O projeto utiliza dados demonstrativos e não deve
 ser considerado um sistema oficial da associação.
+
+## Arquitetura do MVP
+
+A plataforma utiliza HTML5, CSS3 e JavaScript,
+com separação entre estrutura, apresentação e comportamento.
+
+- index.html: estrutura semântica e telas.
+- style.css: identidade visual, acessibilidade e responsividade.
+- script.js: navegação, interações e gerenciamento dos dados.
+- assets/: recursos gráficos da interface.
+
+Essa organização facilita a manutenção e permite
+evoluir os módulos sem reestruturar toda a aplicação.
+
+## Segurança e limitações
+
+O sistema é um protótipo acadêmico e não possui
+autenticação ou banco de dados em servidor.
+
+Os dados demonstrativos não devem conter informações
+pessoais reais ou denúncias confidenciais.
+
+Antes de disponibilizar a aplicação para uso público,
+serão necessárias validações de entrada, proteção
+dos dados, controle de acesso e testes de segurança.
